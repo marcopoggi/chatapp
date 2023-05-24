@@ -1,7 +1,0 @@
-<% url =  @room.new_record? ? rooms_path : room_path(@room) %>
-<% submit_button_text = @room.new_record? ? "Create" : "Update" %>
-
-<%= form_with(model: @room, url: url) do |f|%>
-  <%= f.text_field :name %>
-  <%= f.submit(submit_button_text)%>
-<% end %>

@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "show_conversation" do %>
+  <div>
+    <h1>Conversations#show <%= @conversation.id %></h1>
+  </div>
+  <%= turbo_frame_tag "conversation_messages", src: conversation_messages_path(@conversation), loading: 'lazy' do %>
+    Loading...
+  <% end %>
+  <%= turbo_frame_tag "new_message", src: new_conversation_message_path(conversation_id: @conversation.id) %>
+<% end %>

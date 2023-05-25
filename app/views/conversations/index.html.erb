@@ -1,0 +1,9 @@
+<div class="container">
+  <h4>Chats</h4>
+  <%= render @conversations %>
+  <%= turbo_frame_tag "show_conversation" do %>
+    <div>
+      <h1>Empty State</h1>
+    </div>
+  <% end %>
+</div>

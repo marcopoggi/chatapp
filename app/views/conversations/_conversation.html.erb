@@ -1,0 +1,5 @@
+<div class="conversation">
+  <% conversation.users.each do |user| %>
+    <%= link_to(user.email, conversation, data: {turbo_frame: "show_conversation"}) if user.id != current_user.id %> 
+  <% end %>
+</div>

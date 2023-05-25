@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "conversation_messages" do %>
+  <div class="messages">
+    <% if @messages.present? %>
+      <%= render @messages%>
+    <% else %>
+      <span>No Messages</span>
+    <% end %>
+  </div>
+<% end %>

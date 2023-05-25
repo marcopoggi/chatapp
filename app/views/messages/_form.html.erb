@@ -1,0 +1,4 @@
+<%= form_with(model: @message, remote: true, url: conversation_messages_path) do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit "send"%>
+<% end %>
